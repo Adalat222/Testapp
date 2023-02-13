@@ -10,14 +10,14 @@ task:
     cpu: 8
     memory: 32G
   Init_script:
-    - repo init -u https://github.com/Evolution-X/manifest -b tiramisu
+    - repo init -u https://github.com/Project-Elixir/manifest -b Tiramisu
   Download_script:
     - repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
   Setup_Config_script:
     - git clone --depth=1 https://github.com/LineageOS/android_kernel_xiaomi_gauguin kernel/xiaomi/gauguin
-    - git clone --depth=1 https://github.com/iitzrohan/device_xiaomi_gauguin device/xiaomi/gauguin
+    - git clone --depth=1 https://github.com/DevAdalat/device_xiaomi_gauguin device/xiaomi/gauguin
     -  . build/envsetup.sh
-    - lunch evolution_$device-userdebug
+    - lunch aosp_$device-userdebug
   Build_Code_script:
-    - mka evolution
+    - mka bacon -j8
 
