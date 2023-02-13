@@ -2,7 +2,7 @@ env:
   WORKDIR: "/tmp"
 
 task:
-  name: "Setting Up, Syncing, Building and Uploading"
+  name: "Setup, Download code and build"
   only_if: $CIRRUS_REPO_OWNER == 'Adalat222'
   timeout_in: 120m
   container:
