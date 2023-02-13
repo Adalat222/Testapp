@@ -16,7 +16,7 @@ task:
   Setup_Config_script:
     - git clone --depth=1 https://github.com/yusufnoor786/device-xiaomi-gauguin device/xiaomi/gauguin
     -  . build/envsetup.sh
-    - lunch aosp_$device-userdebug
+    - lunch aosp_gauguin-userdebug
   Build_Code_script:
     - mka bacon -j8
 
