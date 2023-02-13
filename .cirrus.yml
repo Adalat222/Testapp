@@ -14,9 +14,7 @@ task:
   Download_script:
     - repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
   Setup_Config_script:
-    - git clone --depth=1 https://github.com/Molyuu/neko_kernel_xiaomi_gauguin kernel/xiaomi/gauguin
     - git clone --depth=1 https://github.com/yusufnoor786/device-xiaomi-gauguin device/xiaomi/gauguin
-    - git clone --depth=1 https://github.com/chitangUI/vendor_xiaomi_gauguin vendor/xiaomi/gauguin
     -  . build/envsetup.sh
     - lunch aosp_$device-userdebug
   Build_Code_script:
